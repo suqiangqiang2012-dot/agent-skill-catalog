@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "catalog_id": "amiesuser-agent-skills",
+  "skills": [
+    {
+      "id": "amies-ppt-template",
+      "display_name": "AMIES PPT Template",
+      "description": "AMIES branded PowerPoint generation and formatting skill.",
+      "visibility": "private",
+      "repository": null,
+      "release_manifest_asset": "release-manifest.json",
+      "supported_agents": [
+        "codex"
+      ],
+      "status": "local-preparation"
+    }
+  ]
+}
+

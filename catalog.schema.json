@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Skill Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "catalog_id", "skills"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "catalog_id": {"type": "string", "minLength": 1},
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "display_name",
+          "description",
+          "visibility",
+          "repository",
+          "release_manifest_asset",
+          "supported_agents",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "display_name": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1},
+          "visibility": {"enum": ["public", "private"]},
+          "repository": {
+            "oneOf": [
+              {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+              {"type": "null"}
+            ]
+          },
+          "release_manifest_asset": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supported_agents": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "codex",
+                "claude-code",
+                "cursor",
+                "openclaw",
+                "workbuddy",
+                "deepseek-harness"
+              ]
+            }
+          },
+          "status": {
+            "enum": ["active", "local-preparation", "archived"]
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -14,7 +14,19 @@
         "workbuddy"
       ],
       "status": "active"
+    },
+    {
+      "id": "weixin-channel-video-extractor",
+      "display_name": "Weixin Channel Video Extractor",
+      "description": "从微信视频号公开链接提取视频本体（MP4 + 口播转写 + 关键画面），流程依赖 PC 微信登录态与 wx_channel。仅支持 Windows。",
+      "visibility": "public",
+      "repository": "suqiangqiang2012-dot/weixin-channel-video-extractor",
+      "release_manifest_asset": "release-manifest.json",
+      "supported_agents": [
+        "workbuddy",
+        "codex"
+      ],
+      "status": "active"
     }
   ]
 }
-

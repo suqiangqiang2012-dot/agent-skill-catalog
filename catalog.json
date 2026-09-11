@@ -3,6 +3,19 @@
   "catalog_id": "amiesuser-agent-skills",
   "skills": [
     {
+      "id": "agent-skill-manager",
+      "display_name": "Agent Skill Manager",
+      "description": "Manage versioned Agent Skills through stable GitHub Releases with checked installation, rollback, packaging, and publication workflows.",
+      "visibility": "public",
+      "repository": "suqiangqiang2012-dot/agent-skill-manager",
+      "release_manifest_asset": "release-manifest.json",
+      "supported_agents": [
+        "codex",
+        "workbuddy"
+      ],
+      "status": "active"
+    },
+    {
       "id": "amies-ppt-template",
       "display_name": "AMIES PPT Template",
       "description": "AMIES branded PowerPoint generation and formatting skill.",
